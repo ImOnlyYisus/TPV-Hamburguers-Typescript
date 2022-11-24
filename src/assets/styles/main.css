@@ -1,0 +1,306 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --yellow-primary: #FFF10A;
+    --yellow-secondary: #FEC208;
+    --red: #CF240A;
+    --orange: #FF2D08;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --table-primary: #F2F2F2;
+    --table-odd: #d4d4d4;
+    --table-even: #e6e6e6;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+header{
+    padding: 1em;
+    background-color: var(--red);
+    box-shadow: 0 0 10px #000000cc;
+}
+
+header h1{
+    font-size: 2rem;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+header h1 span{
+    color: var(--yellow-primary);
+    font-size: 1.5em;
+    transform: translateY(-6%);
+}
+
+main{
+    background-color: var(--orange);
+    position: relative;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "products cart";
+    gap: 20px;
+    height: 87vh;
+}
+
+
+footer{
+    padding: 10px;
+    background-color: var(--red);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.377);
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    gap: 1em;
+}
+
+footer p a{
+    color: var(--yellow-primary);
+    text-decoration: none;
+}
+
+section.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    grid-area: products;
+    padding: 1em;
+    overflow-y: scroll;
+}
+
+section.cart{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--yellow-secondary);
+    grid-area: cart;
+    color: var(--black)
+}
+
+section.products figure{
+    background:var(--white);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.377);
+    position: relative;
+}
+
+section.products figure.gluten{
+    border: solid 6px var(--yellow-secondary);
+}
+
+section.products figure.gluten img.gluten-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+}
+
+section.products figure.sugar{
+    border: solid 6px var(--black);
+}
+
+section.products figure.sugar img.sugar-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+}
+
+.product-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.product-header .product-header-image{
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.product-header .product-header-image img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    margin-top: 5px;
+}
+
+.product-header .product-header-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    position: relative;
+}
+
+.product-header .product-header-description h2{
+    font-size: 2em;
+    color: var(--black);
+}
+
+.product-header .product-header-image p{
+    position: absolute;
+    right: 0;
+    bottom:0;
+    font-size: 1.5em;
+    background-color: var(--red);
+    color: var(--yellow-secondary);
+    transform: translate(20%);
+    padding: 2px 5px;
+    border:solid 1px var(--yellow-secondary);
+    border-radius: 3px;
+}
+
+.product-body{
+    padding: 1em;
+}
+
+.product-body p{ /* Change line size */
+    font-size: .9em;
+    color: var(--black);
+    text-align: center;
+    margin: 0 2em 0 2em;
+    margin-bottom: 1em;
+}
+
+.product-body .product-body-actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.product-body .product-body-actions .sizes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.product-body .product-body-actions .sizes input[type="radio"]{
+    appearance: none;
+    margin: 0;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid var(--yellow-secondary);
+    border-radius: 50%;
+    color: var(--yellow-secondary);
+    display: flex;
+    place-content: center;
+    place-items: center;
+}
+
+.product-body .product-body-actions .sizes input[type="radio"]::before{
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--red);
+}
+
+.product-body .product-body-actions .sizes input[type="radio"]:checked::before{
+    transform: scale(1);
+}
+
+.product-body .product-body-actions span{
+    padding: .7em 1em;
+    background: var(--red);
+    border-radius: 5px;
+    color:var(--yellow-secondary);
+    cursor: pointer;
+    transition: .3s;
+    border:solid 2px var(--yellow-secondary);
+}
+
+.product-body .product-body-actions span:hover{
+    color:var(--white)    
+}
+
+section.cart .checklist{
+    height: 85%;
+}
+
+section.cart table{
+    width: 100%;
+    border-collapse: collapse;
+    overflow-y: scroll;
+}
+
+section.cart table thead{
+    background-color: var(--table-primary);
+    color: var(--black);
+    border-bottom: 1px solid var(--black);
+}
+
+section.cart table thead tr th{
+    text-align: center;
+    padding: 1em 0;
+}
+
+section.cart table tbody tr td{
+    text-align: center;
+    padding: 1em 0;
+}
+
+section.cart table tbody tr:nth-child(odd){
+    background-color: var(--table-odd);
+}
+
+section.cart table tbody tr:nth-child(even){
+    background-color: var(--table-even);
+}
+
+section.cart .total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+section.cart .total p{
+    font-size: 1.5em;
+    color: var(--black);
+}
+
+section.cart .total span.checkout{
+    padding: .7em 1em;
+    background: var(--red);
+    border-radius: 5px;
+    color:var(--yellow-secondary);
+    cursor: pointer;
+    transition: .3s;
+    border:solid 2px var(--yellow-primary);
+}
+
+section.cart .total span.checkout:hover{
+    color:var(--white)    
+}
+
+
+
