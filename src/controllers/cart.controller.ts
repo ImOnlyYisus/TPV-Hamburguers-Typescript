@@ -25,8 +25,8 @@ export class CartController{
         this.updateCart();     
     }
 
-    handlerCheckout = (productId)=>{
-        this.cartService.removeProduct(productId);
+    handlerCheckout = ()=>{
+        this.cartService.clearProducts();
         this.updateCart();
     }
 
