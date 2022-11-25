@@ -18,12 +18,4 @@ export class ProductsController{
     onDrinkLoad = (drinks : Drink[]) =>{
         this.productsView.displayDrinks(drinks);
     }
-    
-    handlerBuy =(product)=>{
-
-    }
-    
-    getAllHamburguers = ()=>{
-        this.productsService.getHamburguers;
-    }
 }

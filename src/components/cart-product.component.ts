@@ -1,14 +1,19 @@
-type cartProductTemplate = (cartProduct) => string;
+import { ProductInCart } from "../interface/products-in-cart.interface";
 
-export const cartProductTemplate : cartProductTemplate = ({name,price,iva,size,count,realPrice}) => {
+type cartProductTemplate = (cartProduct : ProductInCart) => string;
+
+export const cartProductTemplate : cartProductTemplate = ({product,size,quantity,subTotal,priceIva}) => {
     return `
     <tr>
-        <td>${name}</td>
+        <td>
+            <i class="fa-sharp fa-solid fa-minus" data-id="${product.id}${size}" id="removeProduct"></i>
+            ${product.name}
+        </td>
         <td>${size}</td>
-        <td>${price}</td>
-        <td>${iva}</td>
-        <td>${count}</td>
-        <td>${realPrice}</td>
+        <td>${product.price}€</td>
+        <td>${priceIva.toFixed(2)}€</td>
+        <td>${quantity}</td>
+        <td>${subTotal.toFixed(2)}€</td>
     </tr>
     `;
 }

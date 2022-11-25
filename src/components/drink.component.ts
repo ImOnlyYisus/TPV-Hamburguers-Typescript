@@ -17,13 +17,13 @@ ${sugar ? "":`<img src="../assets/images/sugar.png" alt="sugar" class="sugar-img
 <div class="product-body">
     <div class="product-body-actions">
         <div class="sizes">
-            <input type="radio" name="size-${id}" id="sizeS">
+            <input type="radio" name="size-${id}" data-size="S" id="sizeS">
             <label for="sizeS">Small</label>
 
-            <input type="radio" name="size-${id}" id="sizeM">
+            <input type="radio" name="size-${id}" data-size="M" id="sizeM">
             <label for="sizeM">Medium</label>
 
-            <input type="radio" name="size-${id}" id="sizeB" checked>
+            <input type="radio" name="size-${id}" id="sizeB" data-size="B" checked>
             <label for="sizeB">Big</label>
         </div>
         <span id="buyButton">Buy one</span>

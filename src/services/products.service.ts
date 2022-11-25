@@ -33,8 +33,18 @@ export class ProductsService {
         return this.drinks;
     }
 
-    getHamburguerById(idHamburguer : string) : Hamburguer{
+    /* getHamburguerById(idHamburguer : string) : Hamburguer{
         return this.hamburguers.find(({ id }) => id = idHamburguer);
+    } */
+
+    getProductById(idProduct : string){
+        const hamburguer : Hamburguer= this.hamburguers.find(({ id }) => id === idProduct);
+        if(!hamburguer){
+            const drink : Drink= this.drinks.find(({ id }) => id === idProduct);
+            return drink; 
+        }
+        
+        return hamburguer;
     }
 
     

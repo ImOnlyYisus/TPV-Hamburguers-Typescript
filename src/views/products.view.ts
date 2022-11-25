@@ -7,8 +7,13 @@ export class ProductsView{
     private products : HTMLDivElement = document.querySelector("#products");
     private productsId =[];
     private buyButtons : NodeListOf<HTMLButtonElement>;
+    private actualSize : string;
     constructor(){
 
+    }
+
+    getActualSize(){
+        return this.actualSize;
     }
 
     displayHambuguers(hamburguers : Hamburguer[]){
@@ -36,8 +41,11 @@ export class ProductsView{
             button.addEventListener("click", () => {
                 const $figure = button.parentElement.parentElement.parentElement;
                 const productId =$figure.getAttribute("data-id");
+                this.actualSize = button.parentElement.querySelector("input:checked").getAttribute("data-size");
                 buyOneProduct(productId);
             });
         }
     }
+
+    
 }

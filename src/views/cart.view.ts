@@ -1,22 +1,38 @@
 import { cartProductTemplate } from "../components/cart-product.component";
-import { Hamburguer } from "../models/hamburguer.model";
+import { ProductInCart } from "../interface/products-in-cart.interface";
 
 export class CartView{
     private cartProducts = document.querySelector("#cartProducts");
     private totalPrice = document.querySelector("#totalPrice");
     private checkout = document.querySelector("#checkout");
+    private removeProducts : NodeListOf<HTMLElement> = document.querySelectorAll("#removeProduct");
 
-    constructor(){}
-
-    displayCart(product : Hamburguer){
-        const cardProductObject = {...product,size:"Big",count:"1",realPrice:"1"};
-        this.cartProducts.innerHTML += cartProductTemplate(cardProductObject);
+    displayCart(products : ProductInCart[]){
+        this.cartProducts.innerHTML = "";
+        products.forEach(product => this.cartProducts.innerHTML += cartProductTemplate(product)); 
     }
 
-    bindCheckoutButton(){
+    bindRemoveProduct(removeToProduct){
+        this.removeProducts = document.querySelectorAll("#removeProduct");
+
+        for(const removeProduct of this.removeProducts){
+            removeProduct.addEventListener("click", () => {
+                const idProduct = removeProduct.getAttribute("data-id");
+                removeToProduct(idProduct);
+            });
+        }
+    }
+
+    displayTotalPrice(total : number){
+        this.totalPrice.innerHTML=`${total.toFixed(2)}€`
+    }
+
+    bindCheckoutButton(clearProducts){
         this.checkout.addEventListener("click", () => {
             this.cartProducts.innerHTML = "";
+            clearProducts();
         });
     }
+
 
 }

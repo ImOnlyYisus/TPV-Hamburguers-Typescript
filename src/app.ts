@@ -10,4 +10,4 @@ const productsView = new ProductsView();
 const cartView = new CartView();
 const cartService = new CartService();
 const productController = new ProductsController(productsView, productsService);
-const cartController =new CartController(cartView, cartService,productsView,productsService);
+const cartController = new CartController(cartView,cartService,productsService,productsView);
