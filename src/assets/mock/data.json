@@ -164,6 +164,187 @@
                 "vegetarian": false,
                 "gluten": false,
                 "image": "https://mcdonalds.es/api/cms/images/mcdonalds-es/6379c853-c6c9-4875-b826-488a75ddcd36_1080x943_Best_Burger_clasicas_BigMac.png?auto=compress,format"
+            },
+            {
+                "id": "d719fa88-6a9b-11ed-a1eb-0242ac12895",
+                "name": "Mac Taky",
+                "price": 4.50,
+                "iva": 0.21,
+                "ingredients": [
+                    {
+                        "id": "ab54c6bb-d5f8-4b2e-b34a-b832808792fd",
+                        "name": "Free gluten bread",
+                        "gluten": false,
+                        "vegetarian": true
+                    },
+                    {
+                        "id": "5028da61-ce3c-4375-a2c5-e1138d54a45",
+                        "name": "Chicken",
+                        "gluten": false,
+                        "vegetarian": false
+                    },
+                    {
+                        "id": "4d0a4798-e806-4914-8795-ee8c7e46ec7e",
+                        "name": "Lettuce",
+                        "gluten": false,
+                        "vegetarian": true
+                    },
+                    {
+                        "id": "fb9af7d5-693b-4ca3-ad8c-84415e53dda4",
+                        "name": "Sauce",
+                        "gluten": false,
+                        "vegetarian": true
+                    },
+                    {
+                        "id": "fb9af7d5-693b-4ca3-ad8c-82215e53da4d",
+                        "name": "Bacon",
+                        "gluten": false,
+                        "vegetarian": false
+                    }
+                ],
+                "vegetarian": false,
+                "gluten": false,
+                "image": "https://mcdonalds.es/api/cms/images/mcdonalds-es/48a660ca-8d77-48f0-a128-048752c2f0d9_3efc27d3e4e1bbdfdd768592f53bb0bd.png?auto=compress,format"
+            },
+            {
+                "id": "d719fa88-6a9b-11ed-a1eb-0242ac12895",
+                "name": "Mac Taky",
+                "price": 4.50,
+                "iva": 0.21,
+                "ingredients": [
+                    {
+                        "id": "ab54c6bb-d5f8-4b2e-b34a-b832808792fd",
+                        "name": "Bread",
+                        "gluten": true,
+                        "vegetarian": true
+                    },
+                    {
+                        "id": "5028da61-ce3c-4375-a2c5-e1138d54a45",
+                        "name": "Chicken",
+                        "gluten": false,
+                        "vegetarian": false
+                    },
+                    {
+                        "id": "4d0a4798-e806-4914-8795-ee8c7e46ec7e",
+                        "name": "Lettuce",
+                        "gluten": false,
+                        "vegetarian": true
+                    },
+                    {
+                        "id": "fb9af7d5-693b-4ca3-ad8c-84415e53dda4",
+                        "name": "Sauce",
+                        "gluten": false,
+                        "vegetarian": true
+                    },
+                    {
+                        "id": "fb9af7d5-693b-4ca3-ad8c-82215e53da4d",
+                        "name": "Bacon",
+                        "gluten": true,
+                        "vegetarian": false
+                    }
+                ],
+                "vegetarian": false,
+                "gluten": true,
+                "image": "https://mcdonalds.es/api/cms/images/mcdonalds-es/48a660ca-8d77-48f0-a128-048752c2f0d9_3efc27d3e4e1bbdfdd768592f53bb0bd.png?auto=compress,format"
+            },
+            {
+                "id": "1234fa88-6a9b-11ed-a1eb-0242ac120acb",
+                "name": "Big Chungus",
+                "price": 7.90,
+                "iva": 0.21,
+                "ingredients": [
+                    {
+                        "id": "ab54c6bb-d5f8-4b2e-b34a-b832808792fd",
+                        "name": "Bread",
+                        "gluten": true,
+                        "vegetarian": true
+                    },
+                    {
+                        "id": "5028da61-ce3c-4375-a2c5-e1138d54e835",
+                        "name": "Meat",
+                        "gluten": false,
+                        "vegetarian": false
+                    },
+                    {
+                        "id": "fb9af7d5-123b-4ca3-ad8c-84415e53dda4",
+                        "name": "Big chungus sauce",
+                        "gluten": false,
+                        "vegetarian": false
+                    }
+                ],
+                "vegetarian": false,
+                "gluten": true,
+                "image": "https://i.ytimg.com/vi/8Nx6zxlShMA/maxresdefault.jpg"
+            },
+            {
+                "id": "1234fa88-6a9b-22ed-a1eb-0242ac120acb",
+                "name": "Inception burguer",
+                "price": 6.66,
+                "iva": 0.21,
+                "ingredients": [
+                    {
+                        "id": "ab54c6bb-d5f8-4b2e-b34a-b832808792fd",
+                        "name": "Bread",
+                        "gluten": true,
+                        "vegetarian": true
+                    },
+                    {
+                        "id": "5028da61-ce3c-4375-a2c5-e1138d54e835",
+                        "name": "Meat",
+                        "gluten": false,
+                        "vegetarian": false
+                    },
+                    {
+                        "id": "4d0a4798-e806-4914-8795-ee8c7e46ec7e",
+                        "name": "Lettuce",
+                        "gluten": false,
+                        "vegetarian": true
+                    },
+                    {
+                        "id": "487cd61c-8a71-46c4-9483-1a9a96e467f4",
+                        "name": "Tomato",
+                        "gluten": false,
+                        "vegetarian": true
+                    },
+                    {
+                        "id": "85644350-6bc1-44cb-892c-9412cec71946",
+                        "name": "Cheese",
+                        "gluten": false,
+                        "vegetarian": true
+                    },
+                    {
+                        "id": "fb9af7d5-693b-4ca3-ad8c-84415e53dda4",
+                        "name": "Sauce",
+                        "gluten": false,
+                        "vegetarian": true
+                    },
+                    {
+                        "id": "5db42e31-e625-4c4d-aa3d-c427e043398c",
+                        "name": "Pickles",
+                        "gluten": false,
+                        "vegetarian": true
+                    }
+                ],
+                "vegetarian": false,
+                "gluten": true,
+                "image": "https://atlas-content-cdn.pixelsquid.com/assets_v2/251/2519102515279042313/jpeg-600/G03.jpg"
+            },
+            {
+                "id": "d719fa88-6a9b-11ed-a1eb-02342ac120acb",
+                "name": "Vegetarian burguer",
+                "price": 11.5,
+                "iva": 0.21,
+                "ingredients": [
+                    {
+                        "id": "4d0a4798-e806-4914-8795-ee8c7e46ec7e",
+                        "name": "Lettuce",
+                        "gluten": false,
+                        "vegetarian": true
+                    }
+                ],
+                "vegetarian": true,
+                "gluten": false,
+                "image": "https://www.vertiflor.com/blog/wp-content/uploads/2017/04/lechuga.jpg"
             }
         ],
 
@@ -207,6 +388,14 @@
                 "iva": 0.15,
                 "sugar": false,
                 "image": "https://s4d-images.telepizza.es/Products/Original/Lata_Fanta_Naranja_Zero-1089.jpg"
+            },
+            {
+                "id": "12386acc-8c5c-4582-a3d3-54b69b1e002e",
+                "name": "Monster Energy",
+                "price": 3.5,
+                "iva": 0.15,
+                "sugar": true,
+                "image": "https://cdn2.yopongoelhielo.com/268-thickbox_default/monster-green.jpg"
             }
         ]
     }
