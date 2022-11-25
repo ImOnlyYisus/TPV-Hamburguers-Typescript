@@ -3,7 +3,7 @@
         "hamburguers": [
             {
                 "id": "d719fa88-6a9b-11ed-a1eb-0242ac120acb",
-                "name": "Big Mac",
+                "name": "Big Yisus",
                 "price": 5.99,
                 "iva": 0.21,
                 "ingredients": [
@@ -114,7 +114,7 @@
             },
             {
                 "id": "d719fa88-6a9b-11ed-a1eb-0242ac12000a",
-                "name": "Big Mac",
+                "name": "Big Yisus",
                 "price": 6.50,
                 "iva": 0.21,
                 "ingredients": [
