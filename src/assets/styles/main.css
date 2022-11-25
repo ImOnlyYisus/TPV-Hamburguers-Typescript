@@ -10,6 +10,7 @@
     --orange: #FF2D08;
     --white: #FFFFFF;
     --black: #000000;
+    --green: #007e00;
 
     --table-primary: #F2F2F2;
     --table-odd: #d4d4d4;
@@ -112,6 +113,17 @@ section.products figure.gluten img.gluten-img{
     position: absolute;
     top: 0;
     right: 0;
+    width: 50px;
+}
+
+section.products figure.vegetarian{
+    border: solid 6px var(--green);
+}
+
+section.products figure.vegetarian img.vegetarian-img{
+    position: absolute;
+    top: 0;
+    right: 15%;
     width: 50px;
 }
 
@@ -265,6 +277,18 @@ section.cart table thead tr th{
 section.cart table tbody tr td{
     text-align: center;
     padding: 1em 0;
+}
+
+section.cart table tbody tr td:nth-child(1){
+    display: flex;
+    margin-left:.5em;
+    align-items: center;
+    gap: .5em;
+}
+
+section.cart table tbody tr td i{
+    cursor: pointer;
+    color:var(--red);
 }
 
 section.cart table tbody tr:nth-child(odd){
