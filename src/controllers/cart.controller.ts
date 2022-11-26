@@ -12,7 +12,7 @@ export class CartController{
         this.cartView.bindCheckoutButton(this.handlerCheckout);
     }
 
-    handlerBuy = (idProduct : string)=>{
+    private handlerBuy = (idProduct : string)=>{
         const product = this.productsService.getProductById(idProduct);
         const productToAdd : ProductInCart = {
             product:product,
@@ -25,19 +25,19 @@ export class CartController{
         this.updateCart();     
     }
 
-    handlerCheckout = ()=>{
+    private handlerCheckout = ()=>{
         this.cartService.clearProducts();
         this.updateCart();
     }
 
-    updateCart(){
+    private updateCart(){
         this.cartService.calculatePrices();
         this.cartView.displayCart(this.cartService.getAllProducts());
         this.cartView.displayTotalPrice(this.cartService.getTotalPrice());
         this.cartView.bindRemoveProduct(this.handlerRemoveProduct); 
     }
 
-    handlerRemoveProduct = (idProduct : string)=>{
+    private handlerRemoveProduct = (idProduct : string)=>{
         this.cartService.removeProduct(idProduct);
         this.updateCart();
     }

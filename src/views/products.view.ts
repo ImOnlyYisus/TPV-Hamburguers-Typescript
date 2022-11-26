@@ -8,15 +8,12 @@ export class ProductsView{
     private productsId =[];
     private buyButtons : NodeListOf<HTMLButtonElement>;
     private actualSize : string;
-    constructor(){
 
-    }
-
-    getActualSize(){
+    public getActualSize(){
         return this.actualSize;
     }
 
-    displayHambuguers(hamburguers : Hamburguer[]){
+    public displayHambuguers(hamburguers : Hamburguer[]){
         hamburguers.forEach(hamburguer => {
             this.products.innerHTML += hamburguerTemplate(hamburguer);
 
@@ -24,7 +21,7 @@ export class ProductsView{
         });        
     }
 
-    displayDrinks(drinks : Drink[]){
+    public displayDrinks(drinks : Drink[]){
         drinks.forEach(drink => {
             this.products.innerHTML += drinkTemplate(drink);
 
@@ -32,11 +29,11 @@ export class ProductsView{
         });
     }
 
-    loadBuyButtons(){
+    public loadBuyButtons(){
         this.buyButtons = document.querySelectorAll("#buyButton");
     }
 
-    bindBuyButton(buyOneProduct){
+    public bindBuyButton(buyOneProduct : (idProduct : string) => void){
         for (const button of this.buyButtons) {
             button.addEventListener("click", () => {
                 const $figure = button.parentElement.parentElement.parentElement;
@@ -46,6 +43,4 @@ export class ProductsView{
             });
         }
     }
-
-    
 }

@@ -11,11 +11,11 @@ export class ProductsController{
         this.productsView.loadBuyButtons();
     }
 
-    onHamburguerLoad = (hamburguers : Hamburguer[]) =>{
+    private onHamburguerLoad = (hamburguers : Hamburguer[]) =>{
         this.productsView.displayHambuguers(hamburguers);
     }
 
-    onDrinkLoad = (drinks : Drink[]) =>{
+    private onDrinkLoad = (drinks : Drink[]) =>{
         this.productsView.displayDrinks(drinks);
     }
 }

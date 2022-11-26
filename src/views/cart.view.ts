@@ -7,12 +7,12 @@ export class CartView{
     private checkout = document.querySelector("#checkout");
     private removeProducts : NodeListOf<HTMLElement> = document.querySelectorAll("#removeProduct");
 
-    displayCart(products : ProductInCart[]){
+    public displayCart(products : ProductInCart[]){
         this.cartProducts.innerHTML = "";
         products.forEach(product => this.cartProducts.innerHTML += cartProductTemplate(product)); 
     }
 
-    bindRemoveProduct(removeToProduct){
+    public bindRemoveProduct(removeToProduct : (product : string) => void){
         this.removeProducts = document.querySelectorAll("#removeProduct");
 
         for(const removeProduct of this.removeProducts){
@@ -23,16 +23,14 @@ export class CartView{
         }
     }
 
-    displayTotalPrice(total : number){
+    public displayTotalPrice(total : number){
         this.totalPrice.innerHTML=`${total.toFixed(2)}€`
     }
 
-    bindCheckoutButton(clearProducts){
+    public bindCheckoutButton(clearProducts : () => void){
         this.checkout.addEventListener("click", () => {
             this.cartProducts.innerHTML = "";
             clearProducts();
         });
     }
-
-
 }
