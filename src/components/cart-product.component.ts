@@ -7,6 +7,7 @@ export const cartProductTemplate : cartProductTemplate = ({product,size,quantity
     <tr>
         <td>
             <i class="fa-sharp fa-solid fa-minus" data-id="${product.id}${size}" id="removeProduct"></i>
+            <img width="50px" src="${product.url}"/>
             ${product.name}
         </td>
         <td>${size}</td>
