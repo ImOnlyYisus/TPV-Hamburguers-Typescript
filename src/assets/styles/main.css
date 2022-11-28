@@ -57,7 +57,7 @@ main{
     background-color: var(--orange);
     position: relative;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-areas: "products cart";
     gap: 20px;
     height: 87vh;
@@ -87,24 +87,27 @@ footer p a{
 
 section.products{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,minmax(300px, 1fr));    
     gap: 1em;
     grid-area: products;
     padding: 1em;
+    height: 100%;
     overflow-y: scroll;
-    grid-area: products;
 }
 
 section.cart{
     position: absolute;
-    top: 0;
     right: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     background: var(--yellow-secondary);
     grid-area: cart;
     color: var(--black);
     grid-area: cart;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 section.products figure{
@@ -266,33 +269,39 @@ section.products figure.sugar img.sugar-img{
 }
 
 section.cart .checklist{
-    height: 85%;
+    overflow-y: scroll;
+    height: 80%;
 }
 
 section.cart table{
     width: 100%;
     border-collapse: collapse;
-    overflow-y: scroll;
+    
+    
 }
 
 section.cart table thead{
     background-color: var(--table-primary);
     color: var(--black);
     border-bottom: 1px solid var(--black);
+    position: sticky;
+    top: 0;
+    right: 0;
 }
 
 section.cart table thead tr th{
+    padding: 1em;
     text-align: center;
-    padding: 1em 0;
 }
 
 section.cart table tbody tr td{
-    text-align: center;
     padding: 1em 0;
+    text-align: center;
 }
 
 section.cart table tbody tr td:nth-child(1){
     display: flex;
+    align-items: center;
     margin-left:.5em;
     align-items: center;
     gap: .5em;
