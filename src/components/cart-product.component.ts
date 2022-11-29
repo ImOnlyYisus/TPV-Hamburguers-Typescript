@@ -13,7 +13,7 @@ export const cartProductTemplate : cartProductTemplate = ({product,size,quantity
         <td>${size}</td>
         <td>${product.price}€</td>
         <td>${priceIva.toFixed(2)}€</td>
-        <td>${quantity}</td>
+        <td>x${quantity}</td>
         <td>${subTotal.toFixed(2)}€</td>
     </tr>
     `;
